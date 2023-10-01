@@ -11,7 +11,6 @@ students = [(names.get_first_name(), [random.randint(55, 100) for _ in range(5)]
 # The students variable is different every time the code runs
 # print(students)
 
-
 def write_to_file(file_name, data):
     with open(file_name, 'w') as file:
         for student in data:
