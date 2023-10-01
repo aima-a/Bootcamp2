@@ -1,11 +1,14 @@
 '''1. Create a txt file with students, each with multiple scores, using write mode'''
 
 import random
-import names    # Run 'python3 -m pip install names' in terminal
+import names  # Run 'python3 -m pip install names' in terminal
 
-# Generate a list of 6 tuples with random student names and 5 random grades each; different every time the code is run
-students = [(names.get_first_name(), [random.randint(55, 100) for _ in range(5)]) for _ in range(11)]
-# _ = unused placeholder variable ('I don't care about this variable"
+# Generate a list of 10 tuples with random student names and 5 random grades per student
+students = [(names.get_first_name(), [random.randint(55, 100) for _ in range(5)]) for _ in range(10)]
+
+
+# _ = unused placeholder variable ('I don't care about this variable")
+# The students variable is different every time the code runs
 # print(students)
 
 
@@ -19,7 +22,7 @@ def write_to_file(file_name, data):
         file.close()
 
 
-write_to_file('students_multi.txt', students)
+write_to_file('../Scenarios/students_multi.txt', students)
 
 '''2. Read the file data and classify it into students and scores'''
 
@@ -36,10 +39,10 @@ def read_file(file_name):
         return student_data
 
 
-students_multi = read_file('students_multi.txt')
+students_multi = read_file('../Scenarios/students_multi.txt')
 print(students_multi)
 
-'''3. Find the average score of each student with multiple scores attached to their name'''
+'''3. Find and print the average score of each student'''
 
 
 def avg_score_per_student(student_data):
@@ -58,6 +61,8 @@ class_data = avg_score_per_student(students_multi)
 print(class_data)
 
 '''Optional: calculate the average score for the whole class'''
+
+
 def avg_score_for_class(avg_data):
     class_avgs = []
     for item in avg_data:
