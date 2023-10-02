@@ -3,8 +3,8 @@
 import random
 import names    # Run 'python3 -m pip install names' in terminal
 
-# Generate a list of 6 tuples with random student names and 5 random grades each; different every time the code is run
-students = [(names.get_first_name(), [random.randint(55, 100) for _ in range(5)]) for _ in range(11)]
+# Generate a list of 10 tuples with random student names and 5 random grades each; different every time the code is run
+students = [(names.get_first_name(), [random.randint(55, 100) for _ in range(5)]) for _ in range(10)]
 # _ = unused placeholder variable ('I don't care about this variable"
 # print(students)
 
